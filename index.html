@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Culto Real</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🙏 Culto Real: Um Encontro com Propósito</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page">
+
+  <div class="slide " id="pagina1">
     <h1>🙏 Culto Real: Um Encontro com Propósito</h1>
     <p>Prepare-se para um momento de paz, fé e conexão verdadeira. Um convite para aquecer a alma com a presença de Deus... e quem sabe, do príncipe também.</p>
-    <a class="button" href="#">Próxima Página</a>
+    <button onclick="mostrarPagina('pagina2')">Próxima Página</button>
   </div>
+
+  <div class="slide hidden" id="pagina2">
+    <h1></h1>
+    <p>Entre tantos compromissos do reino, o príncipe separou um momento sagrado para estar ao lado da princesa em um culto de gratidão e paz.</p>
+    <button onclick="mostrarPagina('pagina3')">Próxima Página</button>
+  </div>
+
+  <div class="slide hidden" id="pagina3">
+    <h1></h1>
+    <p>Não é só uma reunião, é uma chance de viver um capítulo diferente. Onde a presença fala mais alto que palavras.</p>
+    <button onclick="mostrarPagina('pagina4')">Próxima Página</button>
+  </div>
+
+  <div class="slide hidden" id="pagina4">
+    <h1></h1>
+    <p>Um culto, uma presença... e a princesa ao lado. A história está pronta pra ser vivida.</p>
+    <button onclick="alert('Convite aceito com honra real!')">Confirmar presença</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
