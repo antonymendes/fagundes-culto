@@ -4,34 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🙏 Culto Real: Um Encontro com Propósito</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #fdf8f2;
+      color: #3a2f28;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #f7c04a;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    button:hover {
+      background-color: #ffd369;
+    }
+    .slide {
+      display: none;
+    }
+    .slide.active {
+      display: block;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="slide " id="pagina1">
+  <div class="slide active" id="pagina1">
     <h1>🙏 Culto Real: Um Encontro com Propósito</h1>
     <p>Prepare-se para um momento de paz, fé e conexão verdadeira. Um convite para aquecer a alma com a presença de Deus... e quem sabe, do príncipe também.</p>
     <button onclick="mostrarPagina('pagina2')">Próxima Página</button>
   </div>
 
   <div class="slide hidden" id="pagina2">
-    <h1></h1>
+    
     <p>Entre tantos compromissos do reino, o príncipe separou um momento sagrado para estar ao lado da princesa em um culto de gratidão e paz.</p>
     <button onclick="mostrarPagina('pagina3')">Próxima Página</button>
   </div>
 
   <div class="slide hidden" id="pagina3">
-    <h1></h1>
+    
     <p>Não é só uma reunião, é uma chance de viver um capítulo diferente. Onde a presença fala mais alto que palavras.</p>
     <button onclick="mostrarPagina('pagina4')">Próxima Página</button>
   </div>
 
   <div class="slide hidden" id="pagina4">
-    <h1></h1>
+    
     <p>Um culto, uma presença... e a princesa ao lado. A história está pronta pra ser vivida.</p>
     <button onclick="alert('Convite aceito com honra real!')">Confirmar presença</button>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    function mostrarPagina(id) {
+      const todas = document.querySelectorAll('.slide');
+      todas.forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      mostrarPagina('pagina1');
+    });
+  </script>
 </body>
 </html>
